@@ -1,0 +1,23 @@
+(library
+ (name project)
+ (libraries
+  async
+  ;; async_kernel is necessary for async expect tests to work properly.
+  async_kernel
+  async_log
+  async_rpc_kernel
+  async_unix
+  core
+  core.command
+  core.univ_map
+  core_kernel.bus
+  core_kernel.nonempty_list
+  core_kernel.pairing_heap
+  core_kernel.reversed_list
+  core_kernel.uuid
+  core_kernel.vec
+  ;; ppx_expect.config_types is necessary for expect tests to work properly.
+  ppx_expect.config_types)
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane -check)))

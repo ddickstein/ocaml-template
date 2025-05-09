@@ -1,0 +1,8 @@
+(executable
+ (public_name project)
+ (name main)
+ (libraries project core_unix.command_unix)
+ (preprocess
+  (pps ppx_jane -check))
+ (package project)
+ (promote (until-clean)))
