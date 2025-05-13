@@ -2,6 +2,7 @@
  (public_name project)
  (name main)
  (libraries project core_unix.command_unix)
+ (empty_module_interface_if_absent)
  (preprocess
   (pps ppx_jane -check))
  (package project)

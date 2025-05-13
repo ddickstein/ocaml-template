@@ -18,6 +18,7 @@
   core_kernel.vec
   ;; ppx_expect.config_types is necessary for expect tests to work properly.
   ppx_expect.config_types)
+ (empty_module_interface_if_absent)
  (inline_tests)
  (preprocess
   (pps ppx_jane -check)))
