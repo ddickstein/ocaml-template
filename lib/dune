@@ -7,6 +7,9 @@
   async_log
   async_rpc_kernel
   async_unix
+  base
+  ;; base_internalhash_types is necessary for ppx_hash
+  base.base_internalhash_types
   core
   core.command
   core.univ_map
@@ -22,3 +25,5 @@
  (inline_tests)
  (preprocess
   (pps ppx_jane -check)))
+;; TODO: Also add other ppxs I rely on that aren't in ppx_jane; e.g.,
+;; ppx_string_dedent.
